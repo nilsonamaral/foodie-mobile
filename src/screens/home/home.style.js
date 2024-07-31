@@ -3,8 +3,8 @@ import { COLORS, FONT_SIZE } from "../../constants/theme"
 export const styles = {
     container:{
         flex: 1,
-        marginLeft: 15,
-        backgroundColor: COLORS.white
+        backgroundColor: COLORS.white,
+        paddingLeft: 10
     },
     headerBar: {
         height: 45,

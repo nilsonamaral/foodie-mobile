@@ -1,11 +1,8 @@
 import Routes from "./src/routes";
-import Home from "./src/screens/home/home";
-import Registro from "./src/screens/registro/registro";
-import Registro2 from "./src/screens/registro2/registro2";
-import Login from "./src/screens/login/login";
+import RoutesAuth from "./src/routesAuth";
+
+const isUserAuth = false
 
 export default function App() {
-  return (
-    <Home />
-  );
+  return isUserAuth ? <RoutesAuth /> : <Routes />
 }

@@ -1,6 +1,6 @@
 import { Image, ScrollView, Text, View } from "react-native"
 import {styles} from "../home/home.style.js"
-import icons from "../../constants/icons"
+import icons from "../../constants/icons.js"
 import { SafeAreaView } from "react-native-safe-area-context"
 import TextBox from "../../components/textbox/textbox.jsx"
 import { useState } from "react"
@@ -33,7 +33,8 @@ function Home() {
             {
                 restaurantes.map((restaurante, index) => {
                     return <View key={index}>
-                        <Restaurante logotipo={restaurante.logotipo} nome={restaurante.nome} endereco={restaurante.endereco} />
+                        <Restaurante logotipo={restaurante.logotipo} nome={restaurante.nome} endereco={restaurante.endereco}
+                        icone={icons.favoritoFull} />
                     </View>
                 })
             }
