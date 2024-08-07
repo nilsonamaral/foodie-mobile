@@ -1,5 +1,5 @@
 import { FlatList, Image, Text, View } from "react-native";
-import { styles } from "./favoritos.style";
+import { styles } from "./aba-favoritos.style";
 import { restaurantes } from "../../constants/dados";
 import Restaurante from "../../components/restaurante/restaurante";
 import icons from "../../constants/icons";

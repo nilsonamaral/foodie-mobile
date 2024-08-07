@@ -1,5 +1,5 @@
 import { Image, ScrollView, Text, View } from "react-native"
-import {styles} from "../home/home.style.js"
+import {styles} from "./aba-home.style.js"
 import icons from "../../constants/icons.js"
 import { SafeAreaView } from "react-native-safe-area-context"
 import TextBox from "../../components/textbox/textbox.jsx"
@@ -10,7 +10,11 @@ import { categorias, banners, restaurantes } from "../../constants/dados.js"
 import Restaurante from "../../components/restaurante/restaurante.jsx"
 
 
-function Home() {
+function AbaHome(props) {
+    
+    function OpenCardapio() {
+        props.navigation.navigate("cardapio")
+    }
 
     const [busca, setBusca] = useState("")
 
@@ -33,8 +37,11 @@ function Home() {
             {
                 restaurantes.map((restaurante, index) => {
                     return <View key={index}>
-                        <Restaurante logotipo={restaurante.logotipo} nome={restaurante.nome} endereco={restaurante.endereco}
-                        icone={icons.favoritoFull} />
+                        <Restaurante logotipo={restaurante.logotipo}
+                        nome={restaurante.nome}
+                        endereco={restaurante.endereco}
+                        icone={icons.favoritoFull}
+                        onPress={OpenCardapio} />
                     </View>
                 })
             }
@@ -44,4 +51,4 @@ function Home() {
     </SafeAreaView>
 }
 
-export default Home
+export default AbaHome

@@ -1,5 +1,5 @@
 import { FlatList, Image, Text, View } from "react-native";
-import { styles } from "./pedidos.style";
+import { styles } from "./aba-pedidos.style";
 import { pedidos } from "../../constants/dados";
 import Pedido from "../../components/pedido/pedido";
 import icons from "../../constants/icons";
