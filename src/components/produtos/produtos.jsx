@@ -1,5 +1,6 @@
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./produtos.style.js";
+import icons from "../../constants/icons.js";
 
 function Produtos(props) {
     return <TouchableOpacity style={styles.produtos}>
@@ -12,6 +13,13 @@ function Produtos(props) {
 
             <View>
                 <Text style={styles.valor}>{ new Intl.NumberFormat("pt-BR", {style: "currency", currency: "BRL"}).format(props.valor)}</Text>
+
+                {
+                    props.onClickDelete &&
+                    <TouchableOpacity style={styles.containerDelete} onPress={() => props.onClickDelete()} >
+                        <Image source={icons.remove} style={styles.remove} />
+                    </TouchableOpacity>
+                }
             </View>
 
     </TouchableOpacity>

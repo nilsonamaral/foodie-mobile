@@ -2,7 +2,7 @@ import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./pedido.style.js";
 
 function Pedido(props) {
-    return <View style={styles.container} >
+    return <TouchableOpacity style={styles.container} onPress={() => props.onCLickPedido()} >
         <Image source={props.logotipo} style={styles.logotipo} />
         <View style={styles.textos} >
             <Text> {props.nome} </Text>
@@ -18,7 +18,7 @@ function Pedido(props) {
 
         </View>
 
-    </View>
+    </TouchableOpacity>
 }
 
 export default Pedido
